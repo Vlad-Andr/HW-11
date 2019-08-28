@@ -25,7 +25,6 @@ public class AuthorService {
     public List<Author> getAllAuthors(){
         return authorRep.getAllAuthors();
     }
-    public Author updateAuthor(int idAuthorForUpd, Author author) {
-    return authorRep.updateAuthor(idAuthorForUpd, author);
+    public void updateAuthor(int idAuthorForUpd, Author author) { authorRep.updateAuthor(idAuthorForUpd, author);
     }
 }

@@ -10,5 +10,5 @@ public interface AuthorImpl {
     void deleteAuthor(int idDeletedBook);
     void addBookToAuthor(int idAuthor, Book book);
     List<Author> getAllAuthors();
-    Author updateAuthor(int idAuthorForUpd,Author author);
+    void updateAuthor(int idAuthorForUpd,Author author);
 }

@@ -31,7 +31,7 @@ public class AuthorRep implements AuthorImpl {
     }
 
     @Override
-    public Author updateAuthor(int idAuthorForUpd, Author author) {
+    public void updateAuthor(int idAuthorForUpd, Author author) {
         Author author1 = new Author();
         for(Author a : authors){
             if (a.getIdAuthor()==idAuthorForUpd){
@@ -41,6 +41,5 @@ public class AuthorRep implements AuthorImpl {
         author1.setFullName(author.getFullName());
         author1.setLastName(author.getLastName());
         authors.add(idAuthorForUpd,author1);
-        return author1;
     }
 }
