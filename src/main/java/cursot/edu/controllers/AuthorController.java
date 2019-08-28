@@ -34,7 +34,7 @@ public class AuthorController {
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
     }
-    @PutMapping("author/update/{idAuthorForUpd")
+    @PutMapping("author/update/{idAuthorForUpd}")
     public void updateAuthor(@PathVariable int idAuthorForUpd, Author author) {
         authorService.updateAuthor(idAuthorForUpd, author);
     }
