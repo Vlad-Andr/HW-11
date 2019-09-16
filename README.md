@@ -1,4 +1,4 @@
-DockerHub : https://cloud.docker.com/u/htkgods999/repository/docker/htkgods999/hw13-docker
+DockerHub : https://hub.docker.com/r/htkgods999/hw13-docker
 
 port : 8090;
 
