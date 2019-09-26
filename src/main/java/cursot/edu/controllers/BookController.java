@@ -9,15 +9,15 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("library")
+@RequestMapping("book")
 public class BookController {
     private final BookService bookService;
 
-    @PostMapping("book/add")
+    @PostMapping
     public void addNewBook(@RequestBody Book book){
         bookService.addNewBook(book);
     }
-    @DeleteMapping("book/delete/{idDeletedBook}")
+    @DeleteMapping("{idDeletedBook}")
     public void deleteBook(@PathVariable int idDeletedBook){
         bookService.deleteBook(idDeletedBook);
     }
@@ -25,11 +25,11 @@ public class BookController {
     public List<Book> getAllBooks() {
        return bookService.getAllBooks();
     }
-    @PatchMapping("book/update/{idBookForUpdate}")
+    @PatchMapping("{idBookForUpdate}")
     public void updateBook(@PathVariable int idBookForUpdate, Book book) {
         bookService.updateBook(idBookForUpdate, book);
     }
-    @GetMapping("book/sortbygenre/{genre}")
+    @GetMapping("sortByGenre/{genre}")
     public List<Book> sortedByGenre(@PathVariable String genre) {
         return bookService.sortedByGenre(genre);
     }

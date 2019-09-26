@@ -9,24 +9,24 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("library")
+@RequestMapping("author")
 public class AuthorController {
-    @Autowired
+
     private final AuthorService authorService;
 
     public AuthorController(AuthorService authorService) {
         this.authorService = authorService;
     }
 
-    @PostMapping("author/add")
+    @PostMapping
     public void addNewAuthor(@RequestBody Author author){
         authorService.addNewAuthor(author);
     }
-    @DeleteMapping("author/delete/{idAuthorToBeDeleted}")
+    @DeleteMapping("idAuthorToBeDeleted}")
     public void deleteAuthor(@PathVariable int idAuthorToBeDeleted){
         authorService.deleteAuthor(idAuthorToBeDeleted);
     }
-    @PostMapping("author/add/book/{idAuthor}")
+    @PostMapping("bookToAuthor/{idAuthor}")
     public void addNewBookToAuthor(@PathVariable int idAuthor,@RequestBody Book book){
         authorService.addNewBookToAuthor(idAuthor, book);
     }
@@ -34,7 +34,7 @@ public class AuthorController {
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
     }
-    @PutMapping("author/update/{idAuthorForUpd")
+    @PutMapping("{idAuthorForUpd")
     public void updateAuthor(@PathVariable int idAuthorForUpd, Author author) {
         authorService.updateAuthor(idAuthorForUpd, author);
     }
